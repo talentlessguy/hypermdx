@@ -1,9 +1,12 @@
 {
   "name": "hypermdx",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.0-alpha",
+  "description": "Markdown extended with Hyperapp",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@hyperlight/hyperapp-types": "^1.0.1",
     "@rollup/plugin-typescript": "^8.1.0",
