@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "rootDir": "src",
+    "isolatedModules": true,
+    "outDir": "dist",
+    "types": ["@hyperlight/hyperapp-types", "@types/node"]
+  },
+  "include": ["src/**/*"]
+}
