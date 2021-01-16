@@ -50,17 +50,17 @@ new App().get(async (_, res) => renderToStream(await content).pipe(res)).listen(
 Creates an function to render markdown and components.
 
 ```js
-const mdx = hypermdx({ mode: 'sync' })
+const mdx = hypermdx()
 
-md('Hello World', Component('hello'))
+await md('Hello World', Component('hello'))
 ```
 
 Additionally it supports template strings.
 
 ```js
-const mdx = hypermdx({ mode: 'sync' })
+const mdx = hypermdx()
 
-md`
+await md`
 # Hello World
 ${Component('hello')}
 `
