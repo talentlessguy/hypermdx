@@ -1,5 +1,7 @@
 # hypermdx
 
+![npm-badge][npm-url] ![dl-badge][npm-url]
+
  <img src="https://github.com/talentlessguy/hypermdx/blob/master/logo.png" width="150px" align="right" />
 
 Markdown enhanced with [Hyperapp](https://github.com/jorgebucaran/hyperapp).
@@ -76,7 +78,7 @@ Custom components to be used instead of default HTML tags.
 const md = hypermdx({
   components: {
     h1: (name, props, children) => {
-      return h(n, { style: { color: 'blue' }, ...p }, c)
+      return h(name, { style: { color: 'blue' }, ...props }, children)
     }
   }
 })
@@ -101,3 +103,8 @@ import emoji from 'remark-emoji'
 
 const md = hypermdx({ remarkPlugins: [emoji, capitalize] })
 ```
+
+
+[npm-badge]: https://img.shields.io/npm/v/hypermdx?style=flat-square&color=%234AB8F2
+[dl-badge]: https://img.shields.io/npm/dt/hypermdx?style=flat-square&color=%234AB8F2
+[npm-url]: https://npmjs.com/package/hypermdx
