@@ -6,16 +6,16 @@ dependencies:
   unified: 9.2.0
 devDependencies:
   '@hyperlight/hyperapp-types': 1.0.1
-  '@rollup/plugin-typescript': 8.1.0_rollup@2.36.1+typescript@4.1.3
-  '@types/node': 14.14.20
-  '@typescript-eslint/eslint-plugin': 4.13.0_b7210263e693dcacb9967ef540d4f052
-  '@typescript-eslint/parser': 4.13.0_eslint@7.17.0+typescript@4.1.3
-  eslint: 7.17.0
-  eslint-config-prettier: 7.1.0_eslint@7.17.0
-  eslint-plugin-prettier: 3.3.1_69979e61f6e4e06807b16d761b81a74d
+  '@rollup/plugin-typescript': 8.1.0_rollup@2.36.2+typescript@4.1.3
+  '@types/node': 14.14.21
+  '@typescript-eslint/eslint-plugin': 4.13.0_f3178e4628777c9e52e8278f98ca1f2d
+  '@typescript-eslint/parser': 4.13.0_eslint@7.18.0+typescript@4.1.3
+  eslint: 7.18.0
+  eslint-config-prettier: 7.1.0_eslint@7.18.0
+  eslint-plugin-prettier: 3.3.1_efe762de77ffca883b5e24b22265768d
   hyperapp: 2.0.8
   prettier: 2.2.1
-  rollup: 2.36.1
+  rollup: 2.36.2
   typescript: 4.1.3
 lockfileVersion: 5.2
 packages:
@@ -37,7 +37,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-i6rgnR/YgPEQzZZnbTHHuZdlE8qyoBNalD6F+q4vAFlcMEcqmkoG+mPqJYJCo63qPf74+Y1UZsl3l6f7/RIkmA==
-  /@eslint/eslintrc/0.2.2:
+  /@eslint/eslintrc/0.3.0:
     dependencies:
       ajv: 6.12.6
       debug: 4.3.1
@@ -53,7 +53,7 @@ packages:
     engines:
       node: ^10.12.0 || >=12.0.0
     resolution:
-      integrity: sha512-EfB5OHNYp1F4px/LI/FEnGylop7nOqkQ1LRzCM0KccA2U8tvV8w01KBv37LbO7nW4H+YhKyo2LcJhRwjjV17QQ==
+      integrity: sha512-1JTKgrOKAHVivSvOYw+sJOunkBjUOvjqWk1DPja7ZFhIS2mX/4EgTT8M7eTK9jrKhL/FvXXEbQwIs3pg1xp3dg==
   /@hyperlight/hyperapp-types/1.0.1:
     dev: true
     resolution:
@@ -82,11 +82,11 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-8Broas6vTtW4GIXTAHDoE32hnN2M5ykgCpWGbuXHQ15vEMqr23pB76e/GZcYsZCHALv50ktd24qhEyKr6wBtow==
-  /@rollup/plugin-typescript/8.1.0_rollup@2.36.1+typescript@4.1.3:
+  /@rollup/plugin-typescript/8.1.0_rollup@2.36.2+typescript@4.1.3:
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.36.1
+      '@rollup/pluginutils': 3.1.0_rollup@2.36.2
       resolve: 1.19.0
-      rollup: 2.36.1
+      rollup: 2.36.2
       typescript: 4.1.3
     dev: true
     engines:
@@ -97,12 +97,12 @@ packages:
       typescript: '>=3.4.0'
     resolution:
       integrity: sha512-pyQlcGQYRsONUDwXK3ckGPHjPzmjlq4sinzr7emW8ZMb2oZjg9WLcdcP8wyHSvBjvHrLzMayyPy079RROqb4vw==
-  /@rollup/pluginutils/3.1.0_rollup@2.36.1:
+  /@rollup/pluginutils/3.1.0_rollup@2.36.2:
     dependencies:
       '@types/estree': 0.0.39
       estree-walker: 1.0.1
       picomatch: 2.2.2
-      rollup: 2.36.1
+      rollup: 2.36.2
     dev: true
     engines:
       node: '>= 8.0.0'
@@ -124,21 +124,21 @@ packages:
     dev: false
     resolution:
       integrity: sha512-SXPBMnFVQg1s00dlMCc/jCdvPqdE4mXaMMCeRlxLDmTAEoegHT53xKtkDnzDTOcmMHUfcjyf36/YYZ6SxRdnsw==
-  /@types/node/14.14.20:
+  /@types/node/14.14.21:
     dev: true
     resolution:
-      integrity: sha512-Y93R97Ouif9JEOWPIUyU+eyIdyRqQR0I8Ez1dzku4hDx34NWh4HbtIc3WNzwB1Y9ULvNGeu5B8h8bVL5cAk4/A==
+      integrity: sha512-cHYfKsnwllYhjOzuC5q1VpguABBeecUp24yFluHpn/BQaVxB1CuQ1FSRZCzrPxrkIfWISXV2LbeoBthLWg0+0A==
   /@types/unist/2.0.3:
     dev: false
     resolution:
       integrity: sha512-FvUupuM3rlRsRtCN+fDudtmytGO6iHJuuRKS1Ss0pG5z8oX0diNEw94UEL7hgDbpN94rgaK5R7sWm6RrSkZuAQ==
-  /@typescript-eslint/eslint-plugin/4.13.0_b7210263e693dcacb9967ef540d4f052:
+  /@typescript-eslint/eslint-plugin/4.13.0_f3178e4628777c9e52e8278f98ca1f2d:
     dependencies:
-      '@typescript-eslint/experimental-utils': 4.13.0_eslint@7.17.0+typescript@4.1.3
-      '@typescript-eslint/parser': 4.13.0_eslint@7.17.0+typescript@4.1.3
+      '@typescript-eslint/experimental-utils': 4.13.0_eslint@7.18.0+typescript@4.1.3
+      '@typescript-eslint/parser': 4.13.0_eslint@7.18.0+typescript@4.1.3
       '@typescript-eslint/scope-manager': 4.13.0
       debug: 4.3.1
-      eslint: 7.17.0
+      eslint: 7.18.0
       functional-red-black-tree: 1.0.1
       lodash: 4.17.20
       regexpp: 3.1.0
@@ -157,13 +157,13 @@ packages:
         optional: true
     resolution:
       integrity: sha512-ygqDUm+BUPvrr0jrXqoteMqmIaZ/bixYOc3A4BRwzEPTZPi6E+n44rzNZWaB0YvtukgP+aoj0i/fyx7FkM2p1w==
-  /@typescript-eslint/experimental-utils/4.13.0_eslint@7.17.0+typescript@4.1.3:
+  /@typescript-eslint/experimental-utils/4.13.0_eslint@7.18.0+typescript@4.1.3:
     dependencies:
       '@types/json-schema': 7.0.6
       '@typescript-eslint/scope-manager': 4.13.0
       '@typescript-eslint/types': 4.13.0
       '@typescript-eslint/typescript-estree': 4.13.0_typescript@4.1.3
-      eslint: 7.17.0
+      eslint: 7.18.0
       eslint-scope: 5.1.1
       eslint-utils: 2.1.0
     dev: true
@@ -174,13 +174,13 @@ packages:
       typescript: '*'
     resolution:
       integrity: sha512-/ZsuWmqagOzNkx30VWYV3MNB/Re/CGv/7EzlqZo5RegBN8tMuPaBgNK6vPBCQA8tcYrbsrTdbx3ixMRRKEEGVw==
-  /@typescript-eslint/parser/4.13.0_eslint@7.17.0+typescript@4.1.3:
+  /@typescript-eslint/parser/4.13.0_eslint@7.18.0+typescript@4.1.3:
     dependencies:
       '@typescript-eslint/scope-manager': 4.13.0
       '@typescript-eslint/types': 4.13.0
       '@typescript-eslint/typescript-estree': 4.13.0_typescript@4.1.3
       debug: 4.3.1
-      eslint: 7.17.0
+      eslint: 7.18.0
       typescript: 4.1.3
     dev: true
     engines:
@@ -467,19 +467,19 @@ packages:
       node: '>=0.8.0'
     resolution:
       integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
-  /eslint-config-prettier/7.1.0_eslint@7.17.0:
+  /eslint-config-prettier/7.1.0_eslint@7.18.0:
     dependencies:
-      eslint: 7.17.0
+      eslint: 7.18.0
     dev: true
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
     resolution:
       integrity: sha512-9sm5/PxaFG7qNJvJzTROMM1Bk1ozXVTKI0buKOyb0Bsr1hrwi0H/TzxF/COtf1uxikIK8SwhX7K6zg78jAzbeA==
-  /eslint-plugin-prettier/3.3.1_69979e61f6e4e06807b16d761b81a74d:
+  /eslint-plugin-prettier/3.3.1_efe762de77ffca883b5e24b22265768d:
     dependencies:
-      eslint: 7.17.0
-      eslint-config-prettier: 7.1.0_eslint@7.17.0
+      eslint: 7.18.0
+      eslint-config-prettier: 7.1.0_eslint@7.18.0
       prettier: 2.2.1
       prettier-linter-helpers: 1.0.0
     dev: true
@@ -523,10 +523,10 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-QudtT6av5WXels9WjIM7qz1XD1cWGvX4gGXvp/zBn9nXG02D0utdU3Em2m/QjTnrsk6bBjmCygl3rmj118msQQ==
-  /eslint/7.17.0:
+  /eslint/7.18.0:
     dependencies:
       '@babel/code-frame': 7.12.11
-      '@eslint/eslintrc': 0.2.2
+      '@eslint/eslintrc': 0.3.0
       ajv: 6.12.6
       chalk: 4.1.0
       cross-spawn: 7.0.3
@@ -567,7 +567,7 @@ packages:
       node: ^10.12.0 || >=12.0.0
     hasBin: true
     resolution:
-      integrity: sha512-zJk08MiBgwuGoxes5sSQhOtibZ75pz0J35XTRlZOk9xMffhpA9BTbQZxoXZzOl5zMbleShbGwtw+1kGferfFwQ==
+      integrity: sha512-fbgTiE8BfUJZuBeq2Yi7J3RB3WGUQ9PNuNbmgi6jt9Iv8qrkxfy19Ds3OpL1Pm7zg3BtTVhvcUZbIRQ0wmSjAQ==
   /espree/7.3.1:
     dependencies:
       acorn: 7.4.1
@@ -1171,7 +1171,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
-  /rollup/2.36.1:
+  /rollup/2.36.2:
     dev: true
     engines:
       node: '>=10.0.0'
@@ -1179,7 +1179,7 @@ packages:
     optionalDependencies:
       fsevents: 2.1.3
     resolution:
-      integrity: sha512-eAfqho8dyzuVvrGqpR0ITgEdq0zG2QJeWYh+HeuTbpcaXk8vNFc48B7bJa1xYosTCKx0CuW+447oQOW8HgBIZQ==
+      integrity: sha512-qjjiuJKb+/8n0EZyQYVW+gFU4bNRBcZaXVzUgSVrGw0HlQBlK2aWyaOMMs1Ufic1jV69b9kW3u3i9B+hISDm3A==
   /run-parallel/1.1.10:
     dev: true
     resolution:
@@ -1450,18 +1450,18 @@ packages:
 specifiers:
   '@hyperlight/hyperapp-types': ^1.0.1
   '@rollup/plugin-typescript': ^8.1.0
-  '@types/node': ^14.14.20
-  '@typescript-eslint/eslint-plugin': ^4.11.1
-  '@typescript-eslint/parser': ^4.11.1
-  eslint: ^7.16.0
+  '@types/node': ^14.14.21
+  '@typescript-eslint/eslint-plugin': ^4.13.0
+  '@typescript-eslint/parser': ^4.13.0
+  eslint: ^7.18.0
   eslint-config-prettier: ^7.1.0
-  eslint-plugin-prettier: ^3.3.0
+  eslint-plugin-prettier: ^3.3.1
   hast-to-hyperscript: ^9.0.1
   hast-util-sanitize: ^3.0.2
   hyperapp: ^2.0.8
   mdast-util-to-hast: ^10.1.1
   prettier: ^2.2.1
   remark-parse: ^9.0.0
-  rollup: ^2.35.1
+  rollup: ^2.36.2
   typescript: ^4.1.3
   unified: ^9.2.0

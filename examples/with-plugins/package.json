@@ -1,0 +1,15 @@
+{
+  "name": "basic",
+  "private": true,
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild index.ts > dist/index.js"
+  },
+  "dependencies": {
+    "hyperapp": "^2.0.8",
+    "hyperapp-render": "^3.5.0",
+    "remark-capitalize": "^1.1.0",
+    "remark-emoji": "^2.1.0"
+  }
+}
