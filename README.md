@@ -19,14 +19,14 @@ import { App } from '@tinyhttp/app'
 import { h, text } from 'hyperapp'
 import { renderToStream } from 'hyperapp-render'
 
-import { hypermdx } from 'hypermdx'
+import hypermdx from 'hypermdx'
 
 const Component = (children: string) => h('h3', { style: { color: 'red' } }, text(children))
 
 const md = hypermdx({
   components: {
-    h1: (name, props, children) => {
-      return h(name, { style: { color: 'blue' }, ...props }, children)
+    h1: (n, p, c) => {
+      return h(n, { style: { color: 'blue' }, ...p }, c)
     }
   }
 })
@@ -38,9 +38,9 @@ const content = await md`
 - yet another list
 
 ${Component('custom component')}
-`
+    `
 
-new App().get(async (_req, res) => renderToStream(await content).pipe(res)).listen(3000)
+new App().get(async (_, res) => renderToStream(await content).pipe(res)).listen(3000)
 ```
 
 ## API
@@ -103,7 +103,6 @@ import emoji from 'remark-emoji'
 
 const md = hypermdx({ remarkPlugins: [emoji, capitalize] })
 ```
-
 
 [npm-badge]: https://img.shields.io/npm/v/hypermdx?style=flat-square&color=%234AB8F2
 [dl-badge]: https://img.shields.io/npm/dt/hypermdx?style=flat-square&color=%234AB8F2
