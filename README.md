@@ -1,6 +1,5 @@
-# hypermdx
 
-![](https://github.com/talentlessguy/hypermdx/blob/master/logo.png)
+<h1> <img src="https://github.com/talentlessguy/hypermdx/blob/master/logo.png" width="150px" /> hypermdx </h1>
 
 Markdown enhanced with [Hyperapp](https://github.com/jorgebucaran/hyperapp).
 
