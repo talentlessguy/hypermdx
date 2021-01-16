@@ -1,4 +1,4 @@
-# hypermdx
+# HyperMDX
 
 [![npm-badge]][npm-url] [![dl-badge]][npm-url]
 
