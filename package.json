@@ -7,6 +7,9 @@
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=12.4"
+  },
   "devDependencies": {
     "@hyperlight/hyperapp-types": "^1.0.1",
     "@rollup/plugin-typescript": "^8.1.0",
