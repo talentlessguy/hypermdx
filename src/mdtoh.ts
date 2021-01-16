@@ -10,21 +10,27 @@ type Node = {
   children?: any[]
 }
 
-export function plugin(options: Partial<{ components: Record<string, any>; h: any }> = {}) {
-  const h = options?.h || hyperscript
+export type PluginOptions = Partial<{ components: Record<string, any>; h: any; remarkPlugins: any[] }>
 
+export function plugin({ components, h = hyperscript }: PluginOptions) {
   this.Compiler = (node: Node) => toH(w, toHast(node))
 
   // Wrapper around `h` to pass components in.
   const w = (name: string, props: Record<string, any>, children: any[] | string) => {
-    return h(name, props || {}, children)
+    const id = name.toLowerCase()
+
+    const fn = id in components ? components[id] : h
+
+    return fn(name, props || {}, children)
   }
 }
 
-export async function transformTree(content: string, remarkPlugins?: any[]): Promise<any> {
+export async function transformTree(content: string, options?: PluginOptions): Promise<any> {
+  const { remarkPlugins, ...opts } = options
+
   return await unified()
     .use(md)
     .use(remarkPlugins || [])
-    .use(plugin)
+    .use(plugin, opts)
     .process(content)
 }

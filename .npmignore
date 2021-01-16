@@ -1,6 +1,6 @@
 rollup.config.js
 node_modules
-example
+examples
 src
 .eslintrc
 .eslintignore

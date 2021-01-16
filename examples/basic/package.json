@@ -1,0 +1,14 @@
+{
+  "name": "basic",
+  "private": true,
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild server.ts > dist/server.js"
+  },
+  "dependencies": {
+    "@tinyhttp/app": "^1.1.10",
+    "hyperapp": "^2.0.8",
+    "hyperapp-render": "^3.5.0"
+  }
+}

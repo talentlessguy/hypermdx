@@ -1,21 +1,8 @@
-# hypermdx
-
-Markdown enhanced with Hyperapp
-
-## Install
-
-```sh
-pnpm i hypermdx
-```
-
-## Example
-
-```js
 import { App } from '@tinyhttp/app'
 import { h, text } from 'hyperapp'
 import { renderToStream } from 'hyperapp-render'
 
-import { hypermdx } from 'hypermdx'
+import { hypermdx } from '../dist/index.js'
 
 const Component = (children: string) => h('h3', { style: { color: 'red' } }, text(children))
 
@@ -41,25 +28,3 @@ new App()
     renderToStream(await content).pipe(res)
   })
   .listen(3000)
-```
-
-## API
-
-### `hypermdx(options)`
-
-Creates a function to render markdown and components.
-
-Can be used both as a template string like:
-
-```js
-await md`
-# Hello World
-${Component('hello')}
-`
-```
-
-or:
-
-```js
-await md('Hello World', Component('hello'))
-```
