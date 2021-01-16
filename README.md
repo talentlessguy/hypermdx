@@ -1,6 +1,6 @@
 # hypermdx
 
-![npm-badge][npm-url] ![dl-badge][npm-url]
+[![npm-badge]][npm-url] [![dl-badge]][npm-url]
 
  <img src="https://github.com/talentlessguy/hypermdx/blob/master/logo.png" width="150px" align="right" />
 
