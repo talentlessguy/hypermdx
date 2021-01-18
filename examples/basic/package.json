@@ -4,7 +4,8 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "esbuild server.ts > dist/server.js"
+    "build": "esbuild server.ts > dist/server.js",
+    "dev": "esbuild server.ts | node --input-type=\"module\""
   },
   "dependencies": {
     "@tinyhttp/app": "^1.1.10",

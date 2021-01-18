@@ -43,6 +43,25 @@ ${Component('custom component')}
 new App().get(async (_, res) => renderToStream(await content).pipe(res)).listen(3000)
 ```
 
+Output:
+
+```html
+<div>
+  <div>
+    <h1 style="color:blue">This is a custom heading defined in components</h1>
+    <ul>
+      <li>
+        <p>this is a list</p>
+      </li>
+      <li>
+        <p>yet another list</p>
+      </li>
+    </ul>
+  </div>
+  <h3 style="color:red">custom component</h3>
+</div>
+```
+
 ## API
 
 ### `hypermdx(options)`
@@ -77,9 +96,7 @@ Custom components to be used instead of default HTML tags.
 ```js
 const md = hypermdx({
   components: {
-    h1: (name, props, children) => {
-      return h(name, { style: { color: 'blue' }, ...props }, children)
-    }
+    h1: (name, props, children) => h(name, { style: { color: 'blue' }, ...props }, children)
   }
 })
 ```
@@ -102,6 +119,20 @@ import capitalize from 'remark-capitalize'
 import emoji from 'remark-emoji'
 
 const md = hypermdx({ remarkPlugins: [emoji, capitalize] })
+```
+
+### `sync(options)`
+
+Same as `hypermdx` but instead, it returns a sync function.
+
+```js
+import { sync as hypermdx } from 'hypermdx'
+
+const md = hypermdx()
+
+md`
+# Hello World
+`
 ```
 
 [npm-badge]: https://img.shields.io/npm/v/hypermdx?style=flat-square&color=%234AB8F2

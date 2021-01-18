@@ -1,6 +1,6 @@
 {
   "name": "hypermdx",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Markdown extended with Hyperapp",
   "type": "module",
   "main": "dist/index.js",
@@ -33,16 +33,20 @@
     "type": "git",
     "url": "git+https://github.com/talentlessguy/hypermdx.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "markdown",
+    "hyperapp",
+    "mdx",
+    "remark"
+  ],
+  "author": "v1rtl <pilll.PL22@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/talentlessguy/hypermdx/issues"
   },
   "homepage": "https://github.com/talentlessguy/hypermdx#readme",
   "dependencies": {
     "hast-to-hyperscript": "^9.0.1",
-    "hast-util-sanitize": "^3.0.2",
     "mdast-util-to-hast": "^10.1.1",
     "remark-parse": "^9.0.0",
     "unified": "^9.2.0"

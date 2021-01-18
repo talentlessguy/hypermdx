@@ -1,6 +1,5 @@
 dependencies:
   hast-to-hyperscript: 9.0.1
-  hast-util-sanitize: 3.0.2
   mdast-util-to-hast: 10.1.1
   remark-parse: 9.0.0
   unified: 9.2.0
@@ -785,12 +784,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-zQgLKqF+O2F72S1aa4y2ivxzSlko3MAvxkwG8ehGmNiqd98BIN3JM1rAJPmplEyLmGLO2QZYJtIneOSZ2YbJuA==
-  /hast-util-sanitize/3.0.2:
-    dependencies:
-      xtend: 4.0.2
-    dev: false
-    resolution:
-      integrity: sha512-+2I0x2ZCAyiZOO/sb4yNLFmdwPBnyJ4PBkVTUMKMqBwYNA+lXSgOmoRXlJFazoyid9QPogRRKgKhVEodv181sA==
   /hyperapp/2.0.8:
     dev: true
     resolution:
@@ -1457,7 +1450,6 @@ specifiers:
   eslint-config-prettier: ^7.1.0
   eslint-plugin-prettier: ^3.3.1
   hast-to-hyperscript: ^9.0.1
-  hast-util-sanitize: ^3.0.2
   hyperapp: ^2.0.8
   mdast-util-to-hast: ^10.1.1
   prettier: ^2.2.1
