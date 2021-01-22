@@ -6,7 +6,7 @@ type Children = any[] | TemplateStringsArray
 
 type HyperMDXOptions = PluginOptions
 
-const hypermdx = (opts?: HyperMDXOptions) => async (...children: Children) => {
+export const async = (opts?: HyperMDXOptions) => async (...children: Children) => {
   const els = []
 
   for (const child of children) {
@@ -22,7 +22,7 @@ const hypermdx = (opts?: HyperMDXOptions) => async (...children: Children) => {
   return h('div', {}, els)
 }
 
-export const sync = (opts?: HyperMDXOptions) => (...children: Children) => {
+export const hypermdx = (opts?: HyperMDXOptions) => (...children: Children) => {
   const els = []
 
   for (const child of children) {
@@ -37,8 +37,6 @@ export const sync = (opts?: HyperMDXOptions) => (...children: Children) => {
 
   return h('div', {}, els)
 }
-
-export default hypermdx
 
 export const HyperMDX = (props: HyperMDXOptions & Partial<{ remarkPlugins: any[] }>, children: Children) =>
   hypermdx(props)(children)

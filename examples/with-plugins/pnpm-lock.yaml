@@ -1,6 +1,7 @@
 dependencies:
   hyperapp: 2.0.8
   hyperapp-render: 3.5.0
+  hypermdx: link:../..
   remark-capitalize: 1.1.0
   remark-emoji: 2.1.0
 lockfileVersion: 5.2
@@ -269,5 +270,6 @@ packages:
 specifiers:
   hyperapp: ^2.0.8
   hyperapp-render: ^3.5.0
+  hypermdx: link:../..
   remark-capitalize: ^1.1.0
   remark-emoji: ^2.1.0

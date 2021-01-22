@@ -1,4 +1,4 @@
-import { h as hyperscript, VNode } from 'hyperapp'
+import { h as hyperscript, VNode, text } from 'hyperapp'
 import md from 'remark-parse'
 import toHast from 'mdast-util-to-hast'
 import toH from 'hast-to-hyperscript'
@@ -23,11 +23,29 @@ export function plugin({ components = {}, h = hyperscript }: PluginOptions) {
   const w = (name: string, props: Record<string, any>, children: any[] | string) => {
     const id = name.toLowerCase()
 
-    return (id in components ? components[id] : h)(name, props || {}, children)
+    props = props || {}
+
+    if (Array.isArray(children) && children.some((child) => typeof child === 'string')) {
+      const newChildren = []
+
+      for (const child of children) {
+        if (typeof child === 'string') {
+          newChildren.push(text(child))
+        } else {
+          newChildren.push(child)
+        }
+      }
+
+      return h(name, props, newChildren)
+    } else if (id in components) {
+      return components[id](name, props, children)
+    } else {
+      return h(name, props, children)
+    }
   }
 }
 
-function transformTree(options?: PluginOptions) {
+function transformTree(options: PluginOptions = {}) {
   const { remarkPlugins, ...opts } = options
 
   return unified()

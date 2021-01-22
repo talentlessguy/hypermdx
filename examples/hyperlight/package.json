@@ -1,0 +1,19 @@
+{
+  "name": "hyperlight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hyperlight dev",
+    "build": "hyperlight build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hyperlight/jsx": "^0.0.13",
+    "hyperapp": "^2.0.9",
+    "hyperlight": "^0.0.23",
+    "hypermdx": "link:../../"
+  }
+}

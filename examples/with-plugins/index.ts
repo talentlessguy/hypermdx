@@ -1,4 +1,4 @@
-import { sync as hypermdx } from '../../dist/index.js'
+import { hypermdx } from 'hypermdx'
 import capitalize from 'remark-capitalize'
 import emoji from 'remark-emoji'
 import { renderToString } from 'hyperapp-render'

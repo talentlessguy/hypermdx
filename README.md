@@ -18,20 +18,17 @@ pnpm i hypermdx
 import { App } from '@tinyhttp/app'
 import { h, text } from 'hyperapp'
 import { renderToStream } from 'hyperapp-render'
-
-import hypermdx from 'hypermdx'
+import { hypermdx } from 'hypermdx'
 
 const Component = (children: string) => h('h3', { style: { color: 'red' } }, text(children))
 
 const md = hypermdx({
   components: {
-    h1: (n, p, c) => {
-      return h(n, { style: { color: 'blue' }, ...p }, c)
-    }
+    h1: (n, p, c) => h(n, { style: { color: 'blue' }, ...p }, c)
   }
 })
 
-const content = await md`
+const content = md`
 # This is a custom heading defined in components
 
 - this is a list
@@ -40,7 +37,7 @@ const content = await md`
 ${Component('custom component')}
     `
 
-new App().get(async (_, res) => renderToStream(await content).pipe(res)).listen(3000)
+new App().get(async (_, res) => renderToStream(content).pipe(res)).listen(3000)
 ```
 
 Output:
@@ -71,7 +68,7 @@ Creates an function to render markdown and components.
 ```js
 const mdx = hypermdx()
 
-await md('Hello World', Component('hello'))
+md('Hello World', Component('hello'))
 ```
 
 Additionally it supports template strings.
@@ -79,7 +76,7 @@ Additionally it supports template strings.
 ```js
 const mdx = hypermdx()
 
-await md`
+md`
 # Hello World
 ${Component('hello')}
 `
@@ -121,16 +118,16 @@ import emoji from 'remark-emoji'
 const md = hypermdx({ remarkPlugins: [emoji, capitalize] })
 ```
 
-### `sync(options)`
+### `async(options)`
 
-Same as `hypermdx` but instead, it returns a sync function.
+Same as `hypermdx` but instead, it returns an async function.
 
 ```js
-import { sync as hypermdx } from 'hypermdx'
+import { async as hypermdx } from 'hypermdx'
 
 const md = hypermdx()
 
-md`
+await md`
 # Hello World
 `
 ```
