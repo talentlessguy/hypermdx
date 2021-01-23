@@ -100,9 +100,19 @@ const md = hypermdx({
 
 #### h
 
-- Default: hyperapp's `h`
+- Default: `hyperapp.h`
 
-Hyperscript function to use.
+Hyperscript function.
+
+```js
+import { hyperscript2 } from 'my-own-lib'
+
+const md = hypermdx({ h: hyperscript2 })
+
+md`
+# Hello World
+`
+```
 
 #### remarkPlugins
 

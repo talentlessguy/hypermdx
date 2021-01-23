@@ -7,12 +7,12 @@ import unified from 'unified'
 type Node = {
   type: string
   props?: Record<string, any>
-  children?: any[]
+  children?: any
 }
 
 export type PluginOptions = Partial<{
   components: Record<string, (name: string, props: Record<string, any>, children?: any) => VNode<any>>
-  h: any
+  h: typeof hyperscript
   remarkPlugins: any[]
 }>
 
@@ -20,7 +20,7 @@ export function plugin({ components = {}, h = hyperscript }: PluginOptions) {
   this.Compiler = (node: Node) => toH(w, toHast(node))
 
   // Wrapper around `h` to pass components in
-  const w = (name: string, props: Record<string, any>, children: any[] | string) => {
+  const w = (name: string, props: Record<string, any>, children: any) => {
     const id = name.toLowerCase()
 
     props = props || {}
@@ -28,20 +28,11 @@ export function plugin({ components = {}, h = hyperscript }: PluginOptions) {
     if (Array.isArray(children) && children.some((child) => typeof child === 'string')) {
       const newChildren = []
 
-      for (const child of children) {
-        if (typeof child === 'string') {
-          newChildren.push(text(child))
-        } else {
-          newChildren.push(child)
-        }
-      }
+      for (const child of children) newChildren.push(typeof child === 'string' ? text(child) : child)
 
       return h(name, props, newChildren)
-    } else if (id in components) {
-      return components[id](name, props, children)
-    } else {
-      return h(name, props, children)
-    }
+    } else if (id in components) return components[id](name, props, children)
+    else return h(name, props, children)
   }
 }
 
@@ -54,10 +45,7 @@ function transformTree(options: PluginOptions = {}) {
     .use(plugin, opts)
 }
 
-export async function async(content: string, options?: PluginOptions): Promise<any> {
-  return await transformTree(options).process(content)
-}
+export const async = async (content: string, options?: PluginOptions): Promise<any> =>
+  await transformTree(options).process(content)
 
-export function sync(content: string, options?: PluginOptions): any {
-  return transformTree(options).processSync(content)
-}
+export const sync = (content: string, options?: PluginOptions): any => transformTree(options).processSync(content)

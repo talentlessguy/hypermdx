@@ -9,6 +9,7 @@
     "rootDir": "src",
     "isolatedModules": true,
     "outDir": "dist",
+    "preserveSymlinks": true,
     "types": ["@hyperlight/hyperapp-types", "@types/node"]
   },
   "include": ["src/**/*"]

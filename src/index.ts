@@ -12,10 +12,8 @@ export const async = (opts?: HyperMDXOptions) => async (...children: Children) =
   for (const child of children) {
     if (Array.isArray(child) && child.every((c) => typeof c === 'string')) {
       els.push((await transform.async(child.join(''), opts)).result)
-    } else if (typeof child === 'string') {
-      els.push((await transform.async(child)).result)
     } else {
-      els.push(child)
+      els.push(typeof child === 'string' ? (await transform.async(child)).result : child)
     }
   }
 
@@ -28,10 +26,8 @@ export const hypermdx = (opts?: HyperMDXOptions) => (...children: Children) => {
   for (const child of children) {
     if (Array.isArray(child) && child.every((c) => typeof c === 'string')) {
       els.push(transform.sync(child.join(''), opts).result)
-    } else if (typeof child === 'string') {
-      els.push(transform.sync(child).result)
     } else {
-      els.push(child)
+      els.push(typeof child === 'string' ? transform.sync(child).result : child)
     }
   }
 

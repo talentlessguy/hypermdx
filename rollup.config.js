@@ -14,5 +14,5 @@ export default {
     }
   ],
   plugins: [typescript({ include: ['./src/**/*.ts'] })],
-  external: Object.keys(dependencies)
+  external: [...Object.keys(dependencies), 'hyperapp']
 }
