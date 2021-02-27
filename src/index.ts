@@ -2,6 +2,8 @@ import { h } from 'hyperapp'
 import * as transform from './mdtoh'
 import type { PluginOptions } from './mdtoh'
 
+export { plugin } from './mdtoh'
+
 type Children = any[] | TemplateStringsArray
 
 type HyperMDXOptions = PluginOptions
