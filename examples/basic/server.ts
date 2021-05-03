@@ -2,8 +2,9 @@ import { App } from '@tinyhttp/app'
 import { h, text } from 'hyperapp'
 import { renderToStream } from 'hyperapp-render'
 
-import hypermdx from '../../dist/index.js'
+import { hypermdx } from '../../dist/index.js'
 
+// @ts-ignore
 const Component = (children: string) => h('h3', { style: { color: 'red' } }, text(children))
 
 const md = hypermdx({

@@ -11,9 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hyperlight/jsx": "^0.0.13",
-    "hyperapp": "^2.0.9",
-    "hyperlight": "^0.0.23",
+    "@hyperlight/jsx": "^0.0.18",
+    "hyperapp": "^2.0.17",
+    "hyperlight": "^0.0.31",
     "hypermdx": "link:../../"
   }
 }

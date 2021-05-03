@@ -1,14 +1,8 @@
 import { h as hyperscript, VNode, text } from 'hyperapp'
 import md from 'remark-parse'
-import toHast from 'mdast-util-to-hast'
-import toH from 'hast-to-hyperscript'
+import { toHast } from 'mdast-util-to-hast'
+import { toH, Element } from 'hast-to-hyperscript'
 import unified from 'unified'
-
-type Node = {
-  type: string
-  props?: Record<string, any>
-  children?: any
-}
 
 export type PluginOptions = Partial<{
   components: Record<string, (name: string, props: Record<string, any>, children?: any) => VNode<any>>
@@ -16,8 +10,12 @@ export type PluginOptions = Partial<{
   remarkPlugins: any[]
 }>
 
+type ArgumentsType<T extends (...args: any[]) => any> = T extends (...args: infer A) => any ? A : never
+
 export function plugin({ components = {}, h = hyperscript }: PluginOptions) {
-  this.Compiler = (node: Node) => toH(w, toHast(node))
+  this.Compiler = (node: ArgumentsType<typeof toHast>[0]) => {
+    return toH(w, toHast(node) as Element)
+  }
 
   // Wrapper around `h` to pass components in
   const w = (name: string, props: Record<string, any>, children: any) => {
