@@ -10,7 +10,7 @@
     "isolatedModules": true,
     "outDir": "dist",
     "preserveSymlinks": true,
-    "types": ["@hyperlight/hyperapp-types", "@types/node"]
+    "types": ["@types/node"]
   },
   "include": ["src/**/*"]
 }
