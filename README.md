@@ -4,7 +4,14 @@
 
  <img src="https://github.com/talentlessguy/hypermdx/blob/master/logo.png" width="150px" align="right" />
 
-Markdown enhanced with [Hyperapp](https://github.com/jorgebucaran/hyperapp).
+HyperMDX is an MDX-like library to enhance markdown with [Hyperapp](https://github.com/jorgebucaran/hyperapp).
+
+## Features
+
+- Custom components for HTML elements
+- Embed Hyperapp components inside a page
+- Async and sync modes
+- Remark plugins support
 
 ## Install
 
