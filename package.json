@@ -1,54 +1,53 @@
 {
-  "name": "hypermdx",
-  "version": "2.0.3",
-  "description": "Markdown extended with Hyperapp",
-  "type": "module",
-  "types": "dist/index.d.ts",
-  "exports": "./dist/index.js",
-  "files": [
-    "dist"
-  ],
-  "engines": {
-    "node": ">=12.4"
-  },
-  "devDependencies": {
-    "@rollup/plugin-typescript": "^8.2.3",
-    "@types/node": "^16.3.3",
-    "@typescript-eslint/eslint-plugin": "^4.28.4",
-    "@typescript-eslint/parser": "^4.28.4",
-    "eslint": "^7.31.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "hyperapp": "^2.0.18",
-    "prettier": "^2.3.2",
-    "rollup": "^2.53.2",
-    "typescript": "^4.3.5"
-  },
-  "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -cw",
-    "prepublishOnly": "rollup -c"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/talentlessguy/hypermdx.git"
-  },
-  "keywords": [
-    "markdown",
-    "hyperapp",
-    "mdx",
-    "remark"
-  ],
-  "author": "v1rtl <pilll.PL22@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/talentlessguy/hypermdx/issues"
-  },
-  "homepage": "https://github.com/talentlessguy/hypermdx#readme",
-  "dependencies": {
-    "hast-to-hyperscript": "^10.0.0",
-    "mdast-util-to-hast": "^11.1.1",
-    "remark-parse": "^9.0.0",
-    "unified": "^10.0.0"
-  }
+	"name": "hypermdx",
+	"version": "2.0.3",
+	"description": "Markdown extended with Hyperapp",
+	"type": "module",
+	"types": "dist/index.d.ts",
+	"exports": "./dist/index.js",
+	"files": [
+		"dist"
+	],
+	"engines": {
+		"node": ">=12.4"
+	},
+	"devDependencies": {
+		"@rollup/plugin-typescript": "^8.2.3",
+		"@types/node": "^16.3.3",
+		"@typescript-eslint/eslint-plugin": "^4.28.4",
+		"@typescript-eslint/parser": "^4.28.4",
+		"eslint": "^7.31.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^3.4.0",
+		"hyperapp": "^2.0.18",
+		"prettier": "^2.3.2",
+		"rollup": "^2.53.2",
+		"typescript": "^4.3.5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/talentlessguy/hypermdx.git"
+	},
+	"keywords": [
+		"markdown",
+		"hyperapp",
+		"mdx",
+		"remark"
+	],
+	"author": "v1rtl <pilll.PL22@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/talentlessguy/hypermdx/issues"
+	},
+	"homepage": "https://github.com/talentlessguy/hypermdx#readme",
+	"dependencies": {
+		"hast-to-hyperscript": "^10.0.0",
+		"mdast-util-to-hast": "^11.1.1",
+		"remark-parse": "^9.0.0",
+		"unified": "^10.0.0"
+	},
+	"scripts": {
+		"build": "rollup -c",
+		"dev": "rollup -cw"
+	}
 }

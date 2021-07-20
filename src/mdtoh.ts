@@ -2,7 +2,7 @@ import { h as hyperscript, VNode, text } from 'hyperapp'
 import md from 'remark-parse'
 import { toHast } from 'mdast-util-to-hast'
 import { toH, Element } from 'hast-to-hyperscript'
-import unified from 'unified'
+import { unified } from 'unified'
 
 export type PluginOptions = Partial<{
   components: Record<string, (name: string, props: Record<string, any>, children?: any) => VNode<any>>
