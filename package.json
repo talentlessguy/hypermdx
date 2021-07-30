@@ -1,6 +1,6 @@
 {
   "name": "hypermdx",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Markdown extended with Hyperapp",
   "type": "module",
   "types": "dist/index.d.ts",
