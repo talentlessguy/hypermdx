@@ -12,11 +12,11 @@
     "node": ">=12.4"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^8.2.4",
-    "@types/node": "^16.4.7",
-    "@typescript-eslint/eslint-plugin": "^4.28.5",
-    "@typescript-eslint/parser": "^4.28.5",
-    "eslint": "^7.31.0",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@types/node": "^16.4.10",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "hyperapp": "^2.0.18",
@@ -43,7 +43,7 @@
   "dependencies": {
     "hast-to-hyperscript": "^10.0.1",
     "mdast-util-to-hast": "^11.2.0",
-    "remark-parse": "^9.0.0",
+    "remark-parse": "^10.0.0",
     "unified": "^10.1.0"
   },
   "scripts": {
