@@ -2,7 +2,7 @@
 
 [![npm-badge]][npm-url] [![dl-badge]][npm-url]
 
- <img src="https://github.com/talentlessguy/hypermdx/blob/master/logo.png" width="150px" align="right" />
+ <img src="https://raw.githubusercontent.com/talentlessguy/hypermdx/master/logo.png" width="150px" align="right" />
 
 HyperMDX is an MDX-like library to enhance markdown with [Hyperapp](https://github.com/jorgebucaran/hyperapp).
 
