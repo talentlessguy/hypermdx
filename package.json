@@ -13,15 +13,15 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.2.5",
-    "@types/node": "^16.9.2",
-    "@typescript-eslint/eslint-plugin": "^4.31.1",
-    "@typescript-eslint/parser": "^4.31.1",
+    "@types/node": "^16.10.2",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "hyperapp": "^2.0.19",
     "prettier": "^2.4.1",
-    "rollup": "^2.56.3",
+    "rollup": "^2.58.0",
     "typescript": "^4.4.3"
   },
   "repository": {
@@ -42,7 +42,7 @@
   "homepage": "https://github.com/talentlessguy/hypermdx#readme",
   "dependencies": {
     "hast-to-hyperscript": "^10.0.1",
-    "mdast-util-to-hast": "^11.2.1",
+    "mdast-util-to-hast": "^11.3.0",
     "remark-parse": "^10.0.0",
     "unified": "^10.1.0"
   },
