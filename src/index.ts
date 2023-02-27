@@ -1,12 +1,11 @@
 import { h } from 'hyperapp'
+import { PluggableList } from 'unified'
 import * as transform from './mdtoh'
-import type { PluginOptions } from './mdtoh'
+import type { PluginOptions as HyperMDXOptions } from './mdtoh'
 
 export { plugin } from './mdtoh'
 
-type Children = any[] | TemplateStringsArray
-
-type HyperMDXOptions = PluginOptions
+type Children = unknown[] | TemplateStringsArray
 
 export const async = (opts?: HyperMDXOptions) => async (...children: Children) => {
   const els = []
@@ -36,5 +35,5 @@ export const hypermdx = (opts?: HyperMDXOptions) => (...children: Children) => {
   return h('div', {}, els)
 }
 
-export const HyperMDX = (props: HyperMDXOptions & Partial<{ remarkPlugins: any[] }>, children: Children) =>
+export const HyperMDX = (props: HyperMDXOptions & Partial<{ remarkPlugins: PluggableList }>, children: Children) =>
   hypermdx(props)(children)

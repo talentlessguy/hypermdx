@@ -1,7 +1,7 @@
+import { renderToString } from 'hyperapp-render'
 import { hypermdx } from 'hypermdx'
 import capitalize from 'remark-capitalize'
 import emoji from 'remark-emoji'
-import { renderToString } from 'hyperapp-render'
 
 const md = hypermdx({ remarkPlugins: [emoji, capitalize] })
 

@@ -4,7 +4,7 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "esbuild index.ts > dist/index.js"
+    "build": "tsup server.ts --format=esm"
   },
   "dependencies": {
     "hyperapp": "^2.0.17",
@@ -12,5 +12,8 @@
     "hypermdx": "link:../..",
     "remark-capitalize": "^1.1.0",
     "remark-emoji": "^2.2.0"
+  },
+  "devDependencies": {
+    "tsup": "^6.6.3"
   }
 }

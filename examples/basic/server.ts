@@ -2,9 +2,8 @@ import { App } from '@tinyhttp/app'
 import { h, text } from 'hyperapp'
 import { renderToStream } from 'hyperapp-render'
 
-import { hypermdx } from '../../dist/index.js'
+import { hypermdx } from 'hypermdx'
 
-// @ts-ignore
 const Component = (children: string) => h('h3', { style: { color: 'red' } }, text(children))
 
 const md = hypermdx({
@@ -24,4 +23,4 @@ const content = await md`
 ${Component('custom component')}
     `
 
-new App().get(async (_, res) => renderToStream(await content).pipe(res)).listen(3000)
+new App().get(async (_, res) => renderToStream(content).pipe(res)).listen(3000)

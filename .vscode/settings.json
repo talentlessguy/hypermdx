@@ -1,0 +1,5 @@
+{
+  "editor.defaultFormatter": "dprint.dprint",
+  "prettier.enable": false,
+  "editor.formatOnSave": true
+}
