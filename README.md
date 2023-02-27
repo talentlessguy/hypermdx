@@ -1,6 +1,6 @@
 # HyperMDX
 
-[![npm-badge]][npm-url] [![dl-badge]][npm-url]
+[![npm-badge]][npm-url] [![dl-badge]][npm-url] [![Coveralls][cov-badge-url]][cov-url]
 
  <img src="https://raw.githubusercontent.com/talentlessguy/hypermdx/master/logo.png" width="150px" align="right" />
 
@@ -152,3 +152,5 @@ await md`
 [npm-badge]: https://img.shields.io/npm/v/hypermdx?style=flat-square&color=%234AB8F2
 [dl-badge]: https://img.shields.io/npm/dt/hypermdx?style=flat-square&color=%234AB8F2
 [npm-url]: https://npmjs.com/package/hypermdx
+[cov-badge-url]: https://img.shields.io/coveralls/github/talentlessguy/hypermdx?style=flat-square&color=%234AB8F2
+[cov-url]: https://coveralls.io/github/talentlessguy/hypermdx
